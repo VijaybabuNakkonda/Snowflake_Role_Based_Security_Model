@@ -1,7 +1,7 @@
 # Snowflake_Role_Based_Security_Model
 Snowflake role based security model
 
-Introduction: An exercise to apply role based security model on snowflake database is performed. Below custom roles are created and database level security is applied.
+Introduction: An exercise to apply role based security model on snowflake database is performed. Few custom roles are created and database level security is applied.
 
 Read Snowflake access control overview to understand standard roles from Snowflake.
 https://docs.snowflake.net/manuals/user-guide/security-access-control-overview.html
