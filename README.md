@@ -20,3 +20,6 @@ BI_Tester - Read public schema objects and create own schema objects
 BI_Reader - Only reader access
 BI_Operator - to execute jobs / pipes
 
+Files uploaded
+1. Roles_Creation.sql     - Create Roles and users with hierarchal role security
+2. Database_Security.sql  - Assign role based security access to database, warehouse, tables and views  
