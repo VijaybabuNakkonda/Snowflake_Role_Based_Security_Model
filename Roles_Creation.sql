@@ -39,7 +39,7 @@ grant role BI_Operator to user usr_BI_Operator;
 grant role BI_Proxy to user usr_BI_Proxy;
 
 //Hierarchal security setup
-  //SYSADMIN has access to objects created by BI_Admin except BI_Admin
+  //SYSADMIN has access to objects created by BI_Admin
   grant role BI_Admin to role SYSADMIN;
   
   //BI_Admin has access to objects created by all other roles
