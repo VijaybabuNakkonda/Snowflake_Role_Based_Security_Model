@@ -42,30 +42,30 @@ grant usage                         on warehouse identifier($Warehouse_Name) to 
 grant select on all tables in schema t1.public to role BI_Analyst;
 
 //-------Public schema security setup on Database
-grant all on schema t1.public    to role BI_Admin;
-grant all on schema t1.public    to role BI_Dev;
-grant all on schema t1.public    to role BI_Proxy;
-grant usage on schema t1.public  to role BI_Analyst;
-grant usage on schema t1.public  to role BI_Tester;
-grant usage on schema t1.public  to role BI_Operator;
-grant usage on schema t1.public  to role BI_Reader;
+grant all on schema identifier($Database_Name).public    to role BI_Admin;
+grant all on schema identifier($Database_Name).public    to role BI_Dev;
+grant all on schema identifier($Database_Name).public    to role BI_Proxy;
+grant usage on schema identifier($Database_Name).public  to role BI_Analyst;
+grant usage on schema identifier($Database_Name).public  to role BI_Tester;
+grant usage on schema identifier($Database_Name).public  to role BI_Operator;
+grant usage on schema identifier($Database_Name).public  to role BI_Reader;
 
 
 //----------Table access
 //----------After every table creation below scripts need to rerun so that new table read access are given to other roles
-grant all on all tables in schema t1.public  to role BI_Dev;
-grant all on all tables in schema t1.public  to role BI_Proxy;
+grant all on all tables in schema identifier($Database_Name).public  to role BI_Dev;
+grant all on all tables in schema identifier($Database_Name).public  to role BI_Proxy;
 
-grant select on all tables in schema t1.public  to role BI_Analyst;
-grant select on all tables in schema t1.public  to role BI_Tester;
-grant select on all tables in schema t1.public  to role BI_Operator;
-grant select on all tables in schema t1.public  to role BI_Reader;
+grant select on all tables in schema identifier($Database_Name).public  to role BI_Analyst;
+grant select on all tables in schema identifier($Database_Name).public  to role BI_Tester;
+grant select on all tables in schema identifier($Database_Name).public  to role BI_Operator;
+grant select on all tables in schema identifier($Database_Name).public  to role BI_Reader;
 
 //----------View access
 //----------After every table creation below scripts need to rerun so that new table read access are given to other roles
-grant select on all views in schema t1.public  to role BI_Dev;
-grant select on all views in schema t1.public  to role BI_Proxy;
-grant select on all views in schema t1.public  to role BI_Analyst;
-grant select on all views in schema t1.public  to role BI_Tester;
-grant select on all views in schema t1.public  to role BI_Operator;
-grant select on all views in schema t1.public  to role BI_Reader;
+grant select on all views in schema identifier($Database_Name).public  to role BI_Dev;
+grant select on all views in schema identifier($Database_Name).public  to role BI_Proxy;
+grant select on all views in schema identifier($Database_Name).public  to role BI_Analyst;
+grant select on all views in schema identifier($Database_Name).public  to role BI_Tester;
+grant select on all views in schema identifier($Database_Name).public  to role BI_Operator;
+grant select on all views in schema tidentifier($Database_Name).public  to role BI_Reader;
